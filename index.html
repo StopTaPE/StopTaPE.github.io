@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html><head>
+    <title>מחולל מחלקת תוכן מיוחד</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
+    <style type="text/css">
+    * {
+        font-family: 'Alef', sans-serif;
+    }
+
+    .red-color {
+        background: #d26767 !important;
+        color: white;
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: none !important;
+        border-color: #d26767;
+    }
+
+    .with-logo {
+        background-image: url('logo1.png') !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+	.row-full{
+      width: 100vw;
+      position: relative;
+      margin-left: -50vw;
+      height: 100px;
+      margin-top: 0px;
+      left: 50%;
+	}
+	body {
+    font-family: sans-serif;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 0 0.9375rem;   
+	}
+	
+	small {
+		font-style: italic;
+	}
+	
+	article {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	img {
+		max-width: 100%;
+		display: block;
+		align-self: center;
+	}
+	
+	.switch {
+		align-self: flex-end;
+		margin: 0.9375rem;
+	}
+	
+	.inner-switch {
+		display: inline-block;
+		cursor: pointer;
+		border: 1px solid #555;
+		border-radius: 1.25rem;
+		width: 3.125rem;
+		text-align: center;
+		font-size: 1rem;
+		padding: 0.1875rem;
+		margin-left: 0.3125rem;
+	}
+
+	.dark,
+	.dark * {
+		background-color: #222;
+		color: #e6e6e6;
+		border-color: #e6e6e6;
+	}
+    </style>
+</head>
+
+
+<body dir="rtl">
+    <div class="w3-container w3-display-middle">
+		<div class="row" style="height:970px; background: #fff;">
+			<div class="row row-full" style="height:100px; background: #f00;">
+				<div class="w3-card-4">
+				<header class="w3-container w3-center red-color with-logo">
+					
+                <h1>מחולל מחלקת תוכן מיוחד</h1>
+                <p class="w3-large">
+                    ברוכים הבאים למחולל החדש של מחלקת תוכן מיוחד!
+                    <br>
+                    כל מה שתצטרכו זה למלא את הפרטים למטה,
+                    <br>
+                    והכלי ידאג לספק לכם קוד אותו תדביקו באשכול החדש שאתם יוצרים! שנתחיל?
+					<div class="switch">מצב כהה:
+						<span class="inner-switch">כבוי</span>
+				</div>
+                </p>
+            </header>
+            <div id="ten" div class="w3-container w3-padding-16">
+                <input type="text" class="w3-input" id="title" placeholder="כותרת">
+				<br>
+                <textarea class="w3-input" id="content" rows="6" cols="80" placeholder="תוכן"></textarea>
+				<br>
+                <input type="text" class="w3-input" id="url" placeholder="קישור מקור">
+				<br>
+                <textarea class="w3-input" id="output" rows="10" cols="80" dir="ltr" readonly=""></textarea>
+                <br>
+                <button class="w3-button w3-block red-color" id="buildBtn">יצירת מבזק</button>
+                <br>
+                <button class="w3-button w3-block red-color" id="copyBtn" disabled="">העתק</button>
+                <br>
+                <button class="w3-button w3-block red-color" id="formatBtn">אפס</button>
+            </div>
+        </div>
+	</div>
+</div>
+    </div><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+
+
+
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+			
+			<br>
+			<a href="http://www.reliablecounter.com" target="_blank"></a><br><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
+		</div></center><script type="text/javascript">
+    const build = (title, content, srcUrl) => `[CENTER][U][B][COLOR=#d26767][SIZE=4][FONT=open sans hebrew]${title}
+
+[/FONT][/SIZE][/COLOR][/B][/U][FONT=open sans hebrew]${content}
+
+[B][URL="${srcUrl}"][COLOR=#d26767]מקור[/COLOR][/URL][/B][/FONT]
+
+[SIZE=3][FONT=open sans hebrew][URL="https://www.fxp.co.il/showthread.php?t=726358&p=101038695#post101038695"][B][COLOR=#33ccff]תודה למחלקת הגהה על הגהת הכתבה[/COLOR][/B][/URL][/FONT][/SIZE][/CENTER]`.trim();
+
+
+    $(document).ready(function() {
+        $('#buildBtn').click(function() {
+            $('#output').val(build($('#title').val(), $('#content').val(), $('#url').val()));
+            $('#copyBtn').removeAttr('disabled');
+        });
+
+        $('#copyBtn').click(function() {
+            $('#output').select();
+            document.execCommand("copy");
+        });
+
+        $('#formatBtn').click(function() {
+            $('#output, #title, #content, #url').val('');
+        });
+		$( ".inner-switch" ).on("click", function() {
+    if( $( "#ten" ).hasClass( "dark" )) {
+      $( "#ten" ).removeClass( "dark" );
+      $( ".inner-switch" ).text( "כבוי" );
+    } else {
+      $( "#ten" ).addClass( "dark" );
+      $( ".inner-switch" ).text( "דלוק" );
+    }
+	});
+   });
+	
+    </script>
+
+
+
+</body></html>

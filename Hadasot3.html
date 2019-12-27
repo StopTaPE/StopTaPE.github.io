@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+    <title>Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body dir="rtl">
+    <center><img src="https://profile.fcdn.co.il/sz/1200x-/images/0__05ab3b4f3a2f49.jpg" width="250" height="270">
+	<div class="w3-container w3-display-middle">
+        <div class="w3-card-4">
+            <header class="w3-container w3-indigo">
+                <h1>המחולל של מחלקת חדשות</h1>
+            </header>
+            <div class="w3-container w3-padding-16">
+                <input type="text" class="w3-input" id="title" placeholder="כותרת">
+                
+                <textarea class="w3-input" id="content" rows="6" cols="80" placeholder="תוכן"></textarea>
+                
+                <input type="text" class="w3-input" id="url" placeholder="קישור מקור">
+                
+                <textarea class="w3-input" id="output" rows="10" cols="80" dir="ltr" readonly=""></textarea>
+                
+                <button class="w3-button w3-block w3-indigo" id="buildBtn">יצירת מבזק</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+	const build = (title, content, srcUrl) => `
+[CENTER][U][B][COLOR=#d26767][SIZE=4][FONT=open sans hebrew]${title}
+[/FONT][/SIZE][/COLOR][/B][/U]
+[FONT=open sans hebrew]
+${content}
+
+[B][URL="${srcUrl}"][COLOR=#d26767]מקור[/COLOR][/URL][/B][/FONT][/CENTER]
+`.trim();
+	
+    $(document).ready(function() {
+        $('#buildBtn').click(function() {
+            $('#output').val(build($('#title').val(), $('#content').val(), $('#url').val()));
+        });
+    });
+    </script>
+
+
+
+</center></body></html>
