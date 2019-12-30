@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+	<head>
     <title>מחולל מחלקת תוכן מיוחד</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Alef" rel="stylesheet">
@@ -19,7 +20,7 @@
 	}
 	
 	html { 
-	overflow-y: hidden; 
+	
 	}
 	
     .red-color {
@@ -107,7 +108,7 @@
 		<div class="row" style="height:970px; background: #fff;">
 			<div class="row row-full" style="height:100px; background: #f00;">
 				<div class="w3-card-4">
-				<header class="w3-container w3-center red-color with-logo">
+				<header class="w3-container w3-center red-color with-logo html">
                 <h1>מחולל מחלקת תוכן מיוחד</h1>
                 <p class="w3-large">
                     ברוכים הבאים למחולל החדש של מחלקת תוכן מיוחד!
@@ -125,18 +126,20 @@
 				</div>
                 </p>
             </header>
-            <div id = "ten" div class="w3-container w3-padding-16">
-                <input type="text" class="w3-input w3-radius-button" id="title" placeholder="כותרת">
+            <div id = "ten" div class="w3-container w3-padding-16 html">
+			<form autocomplete="off" ...></form>
+                <input type="text" class="w3-input w3-radius-button" name="textfield" value="" id="title" placeholder="כותרת">
 				<br>
                 <textarea class="w3-input w3-radius-button" id="content" rows="6" cols="80" placeholder="תוכן"></textarea>
 				<br>
-                <input type="text" class="w3-input w3-radius-button" id="url" placeholder="קישור מקור">
+                <input type="text" class="w3-input w3-radius-button" name="textfield" value="" id="url" placeholder="קישור מקור">
 				<br>
                 <textarea class="w3-input w3-radius-button" id="output" rows="10" cols="80" dir="ltr" readonly=""></textarea>
 				<p>
                 <button class="w3-button red-color w3-radius-button" id="buildBtn">יצירת מבזק</button>
                 <button class="w3-button red-color w3-radius-button" id="copyBtn" disabled="">העתק</button>
                 <button class="w3-button red-color w3-radius-button" id="formatBtn">אפס</button>
+				<button class="w3-button red-color w3-radius-button" id="publishBtn" onclick="window.open('https://www.fxp.co.il/newthread.php?do=newthread&f=9657')">פרסם</button>
 				</p>
             </div>
         </div>
@@ -145,6 +148,7 @@
     </div><br>
 			
 			<br>
+			
 			<a href="http://www.reliablecounter.com" target="_blank"></a><br><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
 		</div></center><script type="text/javascript">
     const build = (title, content, srcUrl) => `[CENTER][U][B][COLOR=#d26767][SIZE=4][FONT=open sans hebrew]${title}
@@ -179,6 +183,7 @@
       $( ".inner-switch" ).text( "דלוק" );
     }
 	});
+	
    });
 	
     </script>
