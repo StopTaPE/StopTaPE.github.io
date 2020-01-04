@@ -151,14 +151,13 @@
 			
 			<a href="http://www.reliablecounter.com" target="_blank"></a><br><a href="http://" target="_blank" style="font-family: Geneva, Arial; font-size: 9px; color: #330010; text-decoration: none;"></a>
 		</div></center><script type="text/javascript">
-     const build = (title, content, srcUrl) => `[CENTER][U][B][COLOR=#d26767][SIZE=4][FONT=open sans hebrew]${title}
+       const build = (title, content, srcUrl) => `[CENTER][U][B][COLOR=#d26767][SIZE=4][FONT=open sans hebrew]${title}
 [/FONT][/SIZE][/COLOR][/B][/U][FONT=open sans hebrew]
 ${content}
 [B][URL="${srcUrl}"][COLOR=#d26767]
-מקור[/COLOR][/URL][/B][/FONT]
-
+מקור[/COLOR][/URL]
+[/B][/FONT]
 [SIZE=3][FONT=open sans hebrew][URL="https://www.fxp.co.il/showthread.php?t=726358&p=101038695#post101038695"][B][COLOR=#33ccff]תודה למחלקת הגהה על הגהת הכתבה[/COLOR][/B][/URL][/FONT][/SIZE][/CENTER]`.trim();
-
     $(document).ready(function() {
         $('#buildBtn').click(function() {
             $('#output').val(build($('#title').val(), $('#content').val(), $('#url').val()));
